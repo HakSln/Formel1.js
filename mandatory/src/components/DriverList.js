@@ -12,8 +12,10 @@ class DriverList extends Component {
       return this.props.drivers.map(driver => {
           return (
               <li key={driver.driverId}>
-                 <h1>{driver.givenName} {driver.familyName}
-                 <h2> Born: {driver.dateOfBirth}, {driver.nationality}</h2>
+                 <h1> Name: {driver.givenName} {driver.familyName}
+                 <h2> Number: {driver.permanentNumber}</h2>
+                 <h2> Born: {driver.dateOfBirth}</h2>
+                 <h2> Nationality: {driver.nationality}</h2>
                  </h1>    
               </li>
           )
@@ -25,7 +27,7 @@ class DriverList extends Component {
           <div className ="row">
           <div className="col-1"></div>
           <div className="cole-4">
-            <h1>F1 Drivers in 2019;</h1>
+            <h1>Current F1 Drivers;</h1>
             <ul className="nameList">
             {this.renderList()}
             </ul>            
